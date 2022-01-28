@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  postgres:
+    restart: always
+    image: postgres:latest
+    container_name: "postgres"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - /Users/djonatas/djonatas/estudo/volumePostgree:/var/lib/postgresql/data
